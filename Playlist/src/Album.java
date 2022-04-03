@@ -15,12 +15,9 @@ public class Album {
     }
 
     public boolean addSong(String title, double duration) {
-        // check if the song has already been added
         if (findSong(title) != null) {
             return false;
         }
-
-        // checks passed, add new song to album
         Song newSong = new Song(title, duration);
         songs.add(newSong);
         return true;
